@@ -1,14 +1,10 @@
 package fr.diginamic.factory.entity;
 
-public abstract class ObjetConnecte {
+import fr.diginamic.adapter.Chargeable;
+
+public abstract class ObjetConnecte implements Chargeable {
 
 	protected int limiteVolts;
-
-	public abstract void recharger(int volts);
-
-	public ObjetConnecte() {
-		super();
-	}
 
 	@Override
 	public String toString() {

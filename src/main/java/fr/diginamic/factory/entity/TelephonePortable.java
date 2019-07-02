@@ -2,19 +2,6 @@ package fr.diginamic.factory.entity;
 
 public class TelephonePortable extends ObjetConnecte {
 
-	@Override
-	public void recharger(int volts) {
-		if (volts == limiteVolts) {
-			System.out.println("Téléphone portable en charge");
-		} else if (volts < limiteVolts) {
-			System.out.println("Charge insuffisante pour le téléphone portable");
-		} else {
-
-			System.out.println("Téléphone portable grillé");
-		}
-
-	}
-
 	public TelephonePortable() {
 		this.limiteVolts = 5;
 	}
@@ -62,6 +49,18 @@ public class TelephonePortable extends ObjetConnecte {
 	 */
 	public void setLimiteVolts(int limiteVolts) {
 		this.limiteVolts = limiteVolts;
+	}
+
+	public void recharger(int volts) {
+		if (volts == limiteVolts) {
+			System.out.println("Téléphone portable en charge");
+		} else if (volts < limiteVolts) {
+			System.out.println("Charge insuffisante pour le téléphone portable");
+		} else {
+
+			System.out.println("Téléphone portable grillé");
+		}
+
 	}
 
 }

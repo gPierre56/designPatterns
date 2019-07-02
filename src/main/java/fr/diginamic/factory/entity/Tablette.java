@@ -2,20 +2,6 @@ package fr.diginamic.factory.entity;
 
 public class Tablette extends ObjetConnecte {
 
-	@Override
-	public void recharger(int volts) {
-		if (volts == limiteVolts) {
-			System.out.println("Tablette en charge");
-		} else if (volts < limiteVolts) {
-			System.out.println("Tension insuffisante pour la tablette");
-		}
-
-		else {
-			System.out.println("Tablette grillée");
-		}
-
-	}
-
 	public Tablette() {
 		this.limiteVolts = 10;
 	}
@@ -39,6 +25,19 @@ public class Tablette extends ObjetConnecte {
 		if (getClass() != obj.getClass())
 			return false;
 		return true;
+	}
+
+	public void recharger(int volts) {
+		if (volts == limiteVolts) {
+			System.out.println("Tablette en charge");
+		} else if (volts < limiteVolts) {
+			System.out.println("Tension insuffisante pour la tablette");
+		}
+
+		else {
+			System.out.println("Tablette grillée");
+		}
+
 	}
 
 }
